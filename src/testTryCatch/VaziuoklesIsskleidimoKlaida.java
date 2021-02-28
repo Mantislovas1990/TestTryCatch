@@ -1,13 +1,18 @@
 package testTryCatch;
 
 public class VaziuoklesIsskleidimoKlaida extends Exception {
-    private Exception priezastis;
 
-    public VaziuoklesIsskleidimoKlaida(Exception priezastis) {
+    private String priezastis;
+
+    public VaziuoklesIsskleidimoKlaida(String priezastis) {
         this.priezastis = priezastis;
     }
 
-    public Exception getPriezastis() {
+    public String getPriezastis() {
         return this.priezastis;
+    }
+
+    public void setPriezastis(String priezastis) {
+        this.priezastis = priezastis;
     }
 }
