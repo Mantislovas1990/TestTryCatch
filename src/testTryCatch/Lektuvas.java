@@ -9,11 +9,11 @@ public class Lektuvas {
             vaziuokle();
             System.out.println("OK: Vaziuokle sekmingai isskleista");
         }catch (LaikinaKlaida exception){
-            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis " + exception.getPriezastis() + ". Svarbumas: Laikina");
+            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis: " + exception.getPriezastis() + ". Svarbumas: Laikina");
         }catch (SvarbiKlaida exception){
-            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis " + exception.getPriezastis() + ". Svarbumas: Svarbu");
+            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis: " + exception.getPriezastis() + ". Svarbumas: Svarbu");
         }catch (VaziuoklesIsskleidimoKlaida exception){
-            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis " + exception.getPriezastis() + ". Svarbumas: Nezinoma");
+            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis: " + exception.getPriezastis() + ". Svarbumas: Nezinoma");
         }
     }
 
