@@ -8,19 +8,25 @@ public class Lektuvas {
         try {
             vaziuokle();
             System.out.println("OK: Vaziuokle sekmingai isskleista");
-        }catch ()
+        }catch (LaikinaKlaida exception){
+            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis " + exception.getPriezastis() + ". Svarbumas: Laikina");
+        }catch (SvarbiKlaida exception){
+            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis " + exception.getPriezastis() + ". Svarbumas: Svarbu");
+        }catch (VaziuoklesIsskleidimoKlaida exception){
+            System.out.println("ERROR: nepavuko isskleisti vaziuokles. Priezastis " + exception.getPriezastis() + ". Svarbumas: Nezinoma");
+        }
     }
 
-     void vaziuokle() throws VaziuoklesIsskleidimoKlaida {
+     private void vaziuokle() throws VaziuoklesIsskleidimoKlaida {
         Random rand = new Random();
         int random = rand.nextInt(10);
         switch (random){
             case 0 :
-                throw new VaziuoklesIsskleidimoKlaida("neatsidare durys");
+                throw new SvarbiKlaida("neatsidare durys");
             case 1:
-                throw new VaziuoklesIsskleidimoKlaida("nenusileido ratas");
+                throw new SvarbiKlaida("nenusileido ratas");
             case 2:
-                throw new VaziuoklesIsskleidimoKlaida("sandarumas pazeistas");
+                throw new LaikinaKlaida("per didelis greitis");
         }
     }
 }
